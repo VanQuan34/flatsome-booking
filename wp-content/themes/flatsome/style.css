@@ -1,0 +1,453 @@
+/*
+Theme Name:           Flatsome
+Theme URI:            http://flatsome.uxthemes.com
+Author:               UX-Themes
+Author URI:           https://uxthemes.com
+Description:          Multi-Purpose Responsive WooCommerce Theme
+Version:              3.18.7
+Requires at least:    5.9
+Requires PHP:         5.6
+WC requires at least: 4.7
+Text Domain:          flatsome
+License:              https://themeforest.net/licenses
+License URI:          https://themeforest.net/licenses
+*/
+
+
+/***************
+All custom CSS should be added to Flatsome > Advanced > Custom CSS,
+or in the style.css of a Child Theme.
+***************/
+
+/* Parent Category Tabs */
+.parent-category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.parent-btn {
+    padding: 1px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #d3d3d3;
+    color: #333;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    width: 100%;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+@media (min-width: 992px) {
+  .parent-btn {
+    flex: 0 0 auto;
+    width: calc(20% - 12px);
+  }
+}
+
+.parent-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.parent-btn.active {
+    background: #ffc107;
+    color: #333;
+}
+
+.parent-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Child Category Filter */
+.child-category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.child-btn {
+    padding: 1px 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    width: 100%;
+    line-height: 14px;
+    height: 30px;
+}
+
+@media (min-width: 992px) {
+  .child-btn {
+    flex: 0 0 auto;
+    width: 20%;
+    margin-bottom: 0;
+  }
+}
+
+.child-btn:hover {
+    border-color: #0070ba;
+    color: #0070ba;
+}
+
+.child-btn.active {
+    background: #0070ba;
+    color: white;
+    border-color: #0070ba;
+}
+
+/* Product Search Box */
+.product-search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.product-search-box input{
+    margin-bottom: 0;
+}
+
+.product-search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.product-search-input:focus {
+    outline: none;
+    border-color: #0070ba;
+    box-shadow: 0 0 0 3px rgba(0, 112, 186, 0.1);
+}
+
+.product-search-btn {
+    padding: 0px 30px;
+    background: #0070ba;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-bottom: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.product-search-btn:hover {
+    background: #005a87;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-search-btn:active {
+    transform: translateY(0);
+}
+
+/* Category Description */
+.category-description {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-left: 4px solid #0070ba;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.category-description p {
+    margin: 0;
+}
+
+.category-description p + p {
+    margin-top: 10px;
+}
+
+/* Category Custom HTML */
+.category-custom-html {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.category-custom-html h1,
+.category-custom-html h2,
+.category-custom-html h3,
+.category-custom-html h4,
+.category-custom-html h5,
+.category-custom-html h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.category-custom-html p {
+    margin: 0 0 15px 0;
+}
+
+.category-custom-html p:last-child {
+    margin-bottom: 0;
+}
+
+.category-custom-html ul,
+.category-custom-html ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.category-custom-html li {
+    margin-bottom: 8px;
+}
+
+.category-custom-html img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+/* Loading Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .parent-category-tabs {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .parent-btn {
+        padding: 1px 16px;
+        font-size: 13px;
+    }
+
+    .child-category-filter {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .child-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .product-search-box {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .product-search-input,
+    .product-search-btn {
+        width: 100%;
+    }
+
+    .category-description {
+        padding: 15px;
+    }
+}
+
+
+
+/*fetch post*/
+
+.mobio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mobio-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mobio-thumb {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.mobio-thumb img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.mobio-content {
+    flex: 1;
+}
+
+.mobio-title {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.mobio-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.mobio-title a:hover {
+    color: #0073aa;
+}
+
+.mobio-excerpt {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.mobio-meta {
+    font-size: 13px;
+    color: #888;
+}
+.loop-qty{
+    display:flex;
+    justify-content:center;
+    margin-bottom:10px;
+	align-items: center;
+}
+
+.loop-qty input{
+    width: calc(100% - 85px);
+    text-align:center;
+	margin: 0 10px;
+	height: 30px;
+    border-radius: 4px;
+}
+
+.loop-qty button{
+    width:30px;
+}
+.loop-qty > div {
+    width: 30px;
+    height: 30px;
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+	font-size: 17px;
+    cursor: pointer;
+}
+
+.products .product-small.col .col-inner {
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+}
+
+.shop-pagination {
+    text-align: center;
+    background: #ebebeb;
+    margin: 20px 0 30px;
+}
+
+.shop-pagination button {
+    margin: 0 10px;
+    background: #fff;
+    padding: 2px;
+    width: 32px;
+    height: 32px !important;
+    line-height: 20px;
+    border-radius: 4px;
+    min-height: 32px !important;
+}
+
+.shop-pagination button.active {
+    background: #333;
+    color: #fff;
+}
+
+body.post-type-archive-product #main {
+    margin-top: -50px;
+    background: transparent;
+}
+
+.products.row .product-small .col-inner {
+    padding: 10px;
+    border: 1px solid #c1b1b1;
+    background: #fff;
+}
+
+.products.row.row-small {
+    max-width: 100%;
+    margin: 0;
+}
+
+.page-title-inner {
+    min-height: 200px;
+}
+
+#wrapper {
+    background-color: #eee;
+}
+
+p.name.product-title.woocommerce-loop-product__title {
+    min-height: 42px;
+}
+
+.product-small .add-to-cart-button a {
+    width: 100%;
+}
+
+.product-small .box-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+a.wc-buy-now-btn.wc-buy-now-btn-archive.button.add_to_cart_button {
+    width: 100%;
+    font-size: 0.8em;
+    margin: 0;
+    margin-top: -20px;
+}
