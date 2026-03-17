@@ -375,6 +375,42 @@ function mobio_browsing_history_shortcode() {
 add_shortcode('mobio_browsing_history', 'mobio_browsing_history_shortcode');
 
 
+function update_product_prices_by_category($category_id, $new_price) {
+    if (empty($category_id) || !is_numeric($new_price)) {
+        return;
+    }
+
+    $args = [
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+        'tax_query'      => [
+            [
+                'taxonomy' => 'product_cat',
+                'field'    => 'term_id',
+                'terms'    => $category_id,
+            ],
+        ],
+        'fields' => 'ids'
+    ];
+
+    $query = new WP_Query($args);
+    $count = 0;
+
+    if ($query->have_posts()) {
+        foreach ($query->posts as $product_id) {
+            $product = wc_get_product($product_id);
+            if ($product) {
+                $product->set_regular_price($new_price);
+                $product->set_price($new_price);
+                $product->save();
+                $count++;
+            }
+        }
+    }
+
+    return $count;
+}
+
 function create_star_products() {
 
     $image_url = 'http://test2.quantv.store/wp-content/uploads/2026/03/6_stars.webp'; // ảnh sản phẩm
@@ -425,6 +461,16 @@ add_action('init', function(){
 
     if(isset($_GET['create_products'])){
         create_star_products();
+    }
+
+    if(isset($_GET['update_price']) && isset($_GET['cat_id']) && isset($_GET['new_price'])){
+        $cat_id = intval($_GET['cat_id']);
+        $price = floatval($_GET['new_price']);
+        
+        $count = update_product_prices_by_category($cat_id, $price);
+        
+        echo "✅ Đã cập nhật giá mới ($price) cho $count sản phẩm thuộc danh mục ID: $cat_id";
+        exit;
     }
 
 });
