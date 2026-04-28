@@ -1,0 +1,152 @@
+/* Tevo Elementor Widgets Styles */
+
+/* Insurance Card */
+.tevo-insurance-card {
+  background: var(--tevo-white, #fff);
+  border-radius: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.tevo-insurance-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--tevo-secondary, #f0a030);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.tevo-insurance-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+.tevo-insurance-card:hover::before { transform: scaleX(1); }
+.tevo-insurance-card__icon { font-size: 48px; margin-bottom: 20px; color: var(--tevo-primary, #1a3a5c); }
+.tevo-insurance-card__title { font-size: 1.25rem; margin-bottom: 12px; }
+.tevo-insurance-card__desc { font-size: 15px; color: #64748b; margin-bottom: 20px; }
+.tevo-insurance-card__btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-weight: 600; font-size: 14px;
+  color: var(--tevo-primary, #1a3a5c);
+}
+.tevo-insurance-card__btn:hover { color: var(--tevo-secondary, #f0a030); gap: 10px; }
+
+/* Pricing Table */
+.tevo-pricing {
+  background: #fff; border-radius: 16px; padding: 40px 32px;
+  text-align: center; position: relative; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+.tevo-pricing--featured { border-color: var(--tevo-secondary, #f0a030); transform: scale(1.05); }
+.tevo-pricing:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+.tevo-pricing--featured:hover { transform: scale(1.05) translateY(-6px); }
+.tevo-pricing__badge {
+  position: absolute; top: 16px; right: -30px;
+  background: var(--tevo-secondary, #f0a030); color: #fff;
+  padding: 4px 40px; font-size: 12px; font-weight: 700;
+  transform: rotate(45deg);
+}
+.tevo-pricing__name { font-size: 1.25rem; margin-bottom: 16px; }
+.tevo-pricing__price { margin-bottom: 8px; }
+.tevo-pricing__currency { font-size: 1.25rem; vertical-align: top; font-weight: 600; }
+.tevo-pricing__amount { font-size: 3.5rem; font-weight: 800; line-height: 1; color: var(--tevo-primary, #1a3a5c); }
+.tevo-pricing__period { font-size: 14px; color: #94a3b8; }
+.tevo-pricing__desc { font-size: 14px; color: #64748b; margin-bottom: 24px; }
+.tevo-pricing__features { padding: 24px 0; border-top: 1px solid #e2e8f0; }
+.tevo-pricing__feature {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; font-size: 15px;
+}
+.tevo-pricing__feature svg { flex-shrink: 0; color: var(--tevo-accent, #2ecc71); }
+.tevo-pricing__feature--excluded { color: #cbd5e1; }
+.tevo-pricing__feature--excluded svg { color: #cbd5e1; }
+.tevo-pricing__btn {
+  width: 100%; justify-content: center;
+  padding: 14px 32px; border-radius: 8px;
+  background: var(--tevo-primary, #1a3a5c); color: #fff;
+  font-weight: 600; display: flex;
+}
+.tevo-pricing--featured .tevo-pricing__btn { background: var(--tevo-secondary, #f0a030); }
+.tevo-pricing__btn:hover { opacity: 0.9; transform: translateY(-2px); color: #fff; }
+
+/* Testimonial */
+.tevo-testimonial {
+  background: #fff; border-radius: 12px; padding: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.tevo-testimonial__stars { margin-bottom: 16px; }
+.tevo-testimonial__star { font-size: 18px; color: #e2e8f0; }
+.tevo-testimonial__star--filled { color: #f0a030; }
+.tevo-testimonial__text {
+  font-size: 16px; font-style: italic; line-height: 1.8;
+  margin: 0 0 20px; padding: 0; border: none; color: #4a5568;
+}
+.tevo-testimonial__author { display: flex; align-items: center; gap: 14px; }
+.tevo-testimonial__avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+.tevo-testimonial__name { display: block; font-size: 15px; }
+.tevo-testimonial__company { display: block; font-size: 13px; color: #94a3b8; }
+
+/* Counter */
+.tevo-counter { text-align: center; padding: 20px; }
+.tevo-counter__icon { font-size: 40px; color: var(--tevo-secondary, #f0a030); margin-bottom: 16px; }
+.tevo-counter__number { margin-bottom: 8px; }
+.tevo-counter__value { font-size: 2.75rem; font-weight: 800; color: var(--tevo-primary, #1a3a5c); font-family: var(--tevo-heading-font); }
+.tevo-counter__suffix { font-size: 2rem; font-weight: 700; color: var(--tevo-secondary, #f0a030); }
+.tevo-counter__title { font-size: 15px; font-weight: 500; color: #64748b; margin: 0; }
+
+/* CTA Box */
+.tevo-cta {
+  background: var(--tevo-primary, #1a3a5c);
+  border-radius: 16px; padding: 50px 40px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.tevo-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(240,160,48,0.15) 0%, transparent 60%);
+}
+.tevo-cta__title { color: #fff; font-size: 2rem; margin-bottom: 12px; position: relative; }
+.tevo-cta__desc { color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+
+/* Icon Box */
+.tevo-icon-box {
+  padding: 30px; border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+.tevo-icon-box:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.tevo-icon-box__icon { font-size: 42px; margin-bottom: 18px; color: var(--tevo-primary, #1a3a5c); }
+.tevo-icon-box__title { font-size: 1.15rem; margin-bottom: 10px; }
+.tevo-icon-box__desc { font-size: 15px; color: #64748b; margin-bottom: 14px; }
+.tevo-icon-box__link { font-weight: 600; font-size: 14px; color: var(--tevo-secondary, #f0a030); }
+
+/* Team Member */
+.tevo-team-member { text-align: center; }
+.tevo-team-member__photo { position: relative; overflow: hidden; border-radius: 12px; margin-bottom: 16px; }
+.tevo-team-member__img { width: 100%; height: 320px; object-fit: cover; }
+.tevo-team-member__overlay {
+  position: absolute; inset: 0;
+  background: rgba(26,58,92,0.7);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.tevo-team-member__photo:hover .tevo-team-member__overlay { opacity: 1; }
+.tevo-team-member__social { display: flex; gap: 10px; }
+.tevo-team-member__social a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: #fff; border-radius: 50%; color: #1a3a5c; transition: all 0.3s ease; }
+.tevo-team-member__social a:hover { background: var(--tevo-secondary, #f0a030); color: #fff; }
+.tevo-team-member__name { font-size: 1.15rem; margin-bottom: 4px; }
+.tevo-team-member__position { font-size: 14px; color: var(--tevo-secondary, #f0a030); font-weight: 500; }
+.tevo-team-member__bio { font-size: 14px; color: #64748b; margin-top: 8px; }
+
+/* Quote Form */
+.tevo-quote-form { border-radius: 16px; padding: 40px; }
+.tevo-quote-form--light { background: #f7f9fc; }
+.tevo-quote-form--dark { background: var(--tevo-primary, #1a3a5c); color: #fff; }
+.tevo-quote-form--dark .tevo-quote-form__title { color: #fff; }
+.tevo-quote-form--dark .tevo-quote-form__subtitle { color: rgba(255,255,255,0.7); }
+.tevo-quote-form--gradient { background: linear-gradient(135deg, #1a3a5c, #0f1b2d); color: #fff; }
+.tevo-quote-form--gradient .tevo-quote-form__title { color: #fff; }
+.tevo-quote-form__title { font-size: 1.5rem; margin-bottom: 8px; }
+.tevo-quote-form__subtitle { font-size: 15px; color: #64748b; margin-bottom: 24px; }

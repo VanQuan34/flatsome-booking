@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tevo Theme Documentation</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#333;background:#f8f9fa}
+.doc-wrapper{display:flex;min-height:100vh}
+.doc-sidebar{width:280px;background:#1a3a5c;color:#fff;padding:30px 20px;position:fixed;height:100vh;overflow-y:auto}
+.doc-sidebar h2{font-size:1.3rem;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid #f0a030}
+.doc-sidebar ul{list-style:none}
+.doc-sidebar li{margin-bottom:4px}
+.doc-sidebar a{color:rgba(255,255,255,0.8);text-decoration:none;display:block;padding:8px 12px;border-radius:6px;font-size:14px;transition:all 0.2s}
+.doc-sidebar a:hover,.doc-sidebar a.active{background:rgba(255,255,255,0.1);color:#f0a030}
+.doc-content{margin-left:280px;padding:40px 60px;max-width:900px}
+.doc-content h1{font-size:2rem;color:#1a3a5c;margin-bottom:24px;padding-bottom:12px;border-bottom:3px solid #f0a030}
+.doc-content h2{font-size:1.5rem;color:#1a3a5c;margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid #e2e8f0}
+.doc-content h3{font-size:1.15rem;color:#1a3a5c;margin:24px 0 12px}
+.doc-content p{margin-bottom:16px}
+.doc-content ul,.doc-content ol{margin:0 0 16px 24px}
+.doc-content li{margin-bottom:6px}
+.doc-content code{background:#e2e8f0;padding:2px 6px;border-radius:4px;font-size:14px}
+.doc-content pre{background:#1a202c;color:#e2e8f0;padding:20px;border-radius:8px;margin:16px 0;overflow-x:auto;font-size:14px}
+.doc-content pre code{background:none;padding:0}
+.alert{padding:16px 20px;border-radius:8px;margin:16px 0;font-size:14px}
+.alert-info{background:#ebf5fb;border-left:4px solid #3498db}
+.alert-warning{background:#fef9e7;border-left:4px solid #f0a030}
+.alert-success{background:#eafaf1;border-left:4px solid #2ecc71}
+img{max-width:100%;border-radius:8px;margin:16px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0}
+th,td{padding:10px 14px;text-align:left;border:1px solid #e2e8f0}
+th{background:#1a3a5c;color:#fff;font-weight:600}
+tr:nth-child(even){background:#f7f9fc}
+@media(max-width:768px){.doc-sidebar{display:none}.doc-content{margin-left:0;padding:20px}}
+</style>
+</head>
+<body>
+<div class="doc-wrapper">
+
+<nav class="doc-sidebar">
+<h2>Tevo Documentation</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#requirements">System Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#demo-import">Demo Import</a></li>
+<li><a href="#customizer">Theme Customizer</a></li>
+<li><a href="#elementor">Elementor Widgets</a></li>
+<li><a href="#woocommerce">WooCommerce Setup</a></li>
+<li><a href="#contact-form">Contact Form 7</a></li>
+<li><a href="#header-footer">Header & Footer</a></li>
+<li><a href="#blog">Blog Settings</a></li>
+<li><a href="#insurance-services">Insurance Services</a></li>
+<li><a href="#translations">Translations</a></li>
+<li><a href="#child-theme">Child Theme</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+</nav>
+
+<main class="doc-content">
+
+<h1 id="introduction">Tevo - Insurance Agency WordPress Theme</h1>
+<p>Thank you for purchasing Tevo! This documentation will guide you through the installation, setup, and customization of your theme.</p>
+<p><strong>Version:</strong> 1.0.0 | <strong>Author:</strong> Tevo | <strong>License:</strong> GPL v2+</p>
+
+<h2 id="requirements">System Requirements</h2>
+<table>
+<tr><th>Requirement</th><th>Minimum</th><th>Recommended</th></tr>
+<tr><td>WordPress</td><td>5.0</td><td>6.0+</td></tr>
+<tr><td>PHP</td><td>7.0</td><td>8.0+</td></tr>
+<tr><td>MySQL</td><td>5.6</td><td>8.0+</td></tr>
+<tr><td>Memory Limit</td><td>128MB</td><td>256MB</td></tr>
+</table>
+
+<h2 id="installation">Installation</h2>
+<h3>Method 1: WordPress Dashboard</h3>
+<ol>
+<li>Go to <strong>Appearance → Themes → Add New → Upload Theme</strong></li>
+<li>Click <strong>Choose File</strong> and select <code>tevo.zip</code></li>
+<li>Click <strong>Install Now</strong>, then <strong>Activate</strong></li>
+<li>You will be prompted to install required plugins — click <strong>Begin Installing Plugins</strong></li>
+</ol>
+
+<h3>Method 2: FTP Upload</h3>
+<ol>
+<li>Extract <code>tevo.zip</code> on your computer</li>
+<li>Upload the <code>tevo</code> folder to <code>/wp-content/themes/</code></li>
+<li>Go to <strong>Appearance → Themes</strong> and activate Tevo</li>
+</ol>
+
+<h3>Required Plugins</h3>
+<div class="alert alert-info">After activating the theme, install all required plugins from the notification banner.</div>
+<table>
+<tr><th>Plugin</th><th>Status</th><th>Purpose</th></tr>
+<tr><td>Elementor</td><td>Required</td><td>Page builder</td></tr>
+<tr><td>WooCommerce</td><td>Required</td><td>E-commerce / Insurance products</td></tr>
+<tr><td>Contact Form 7</td><td>Required</td><td>Contact and quote forms</td></tr>
+<tr><td>Tevo Core</td><td>Required</td><td>Custom post types, shortcodes</td></tr>
+<tr><td>Revolution Slider</td><td>Recommended</td><td>Hero sliders</td></tr>
+<tr><td>One Click Demo Import</td><td>Recommended</td><td>Demo content import</td></tr>
+</table>
+
+<h2 id="demo-import">One-Click Demo Import</h2>
+<ol>
+<li>Ensure all required plugins are installed and activated</li>
+<li>Go to <strong>Appearance → Import Demo Data</strong></li>
+<li>Select the <strong>Tevo - Insurance Agency</strong> demo</li>
+<li>Click <strong>Import</strong> and wait for completion</li>
+</ol>
+<div class="alert alert-warning"><strong>Important:</strong> Demo import will add content to your site. It's recommended to use on a fresh WordPress installation.</div>
+
+<h2 id="customizer">Theme Customizer</h2>
+<p>Access the Customizer via <strong>Appearance → Customize → Tevo Theme Options</strong>.</p>
+<h3>Available Sections</h3>
+<table>
+<tr><th>Section</th><th>Options</th></tr>
+<tr><td>General</td><td>Preloader, Scroll to Top button</td></tr>
+<tr><td>Header</td><td>Header style (Default/Transparent/Centered), Sticky header, Top bar, Phone, Email, Working hours, CTA button</td></tr>
+<tr><td>Colors</td><td>Primary, Secondary, Accent, Text, Heading colors</td></tr>
+<tr><td>Typography</td><td>Heading font, Body font (8 Google Fonts options)</td></tr>
+<tr><td>Footer</td><td>Footer columns (2-4), Copyright text</td></tr>
+<tr><td>Blog</td><td>Sidebar position (Left/Right/None), Excerpt length</td></tr>
+</table>
+
+<h2 id="elementor">Custom Elementor Widgets</h2>
+<p>Tevo includes 8 custom Elementor widgets in the <strong>"Tevo Insurance"</strong> category:</p>
+<table>
+<tr><th>Widget</th><th>Description</th></tr>
+<tr><td>Insurance Card</td><td>Service card with icon, title, description, and CTA link</td></tr>
+<tr><td>Pricing Table</td><td>Insurance plan pricing with features list and featured badge</td></tr>
+<tr><td>Quote Form</td><td>Integrates Contact Form 7 shortcode with styled wrapper</td></tr>
+<tr><td>Team Member</td><td>Team member card with photo, name, position</td></tr>
+<tr><td>Testimonial</td><td>Customer review with star rating and avatar</td></tr>
+<tr><td>Counter</td><td>Animated number counter for statistics</td></tr>
+<tr><td>CTA Box</td><td>Call-to-action box with gradient background</td></tr>
+<tr><td>Icon Box</td><td>Icon + title + description service box</td></tr>
+</table>
+
+<h2 id="woocommerce">WooCommerce Setup</h2>
+<ol>
+<li>Complete the WooCommerce setup wizard</li>
+<li>Add insurance products as WooCommerce products</li>
+<li>Configure payment gateways in <strong>WooCommerce → Settings → Payments</strong></li>
+<li>Customize product display in <strong>Customize → Tevo Theme Options</strong></li>
+</ol>
+
+<h2 id="contact-form">Contact Form 7</h2>
+<p>Create your quote form in <strong>Contact → Add New</strong>, then use the shortcode in the Tevo Quote Form Elementor widget or any page.</p>
+
+<h2 id="header-footer">Header & Footer</h2>
+<h3>Header</h3>
+<p>Configure via <strong>Customize → Tevo Theme Options → Header</strong>. Supports 3 styles: Default, Transparent, and Centered.</p>
+<h3>Footer</h3>
+<p>Add widgets to footer columns via <strong>Appearance → Widgets</strong>. Configure columns (2-4) and copyright text in the Customizer.</p>
+
+<h2 id="blog">Blog Settings</h2>
+<p>Configure sidebar position and excerpt length in <strong>Customize → Tevo Theme Options → Blog</strong>.</p>
+
+<h2 id="insurance-services">Insurance Services (CPT)</h2>
+<p>The Tevo Core plugin adds the <strong>Insurance Services</strong> custom post type:</p>
+<ol>
+<li>Go to <strong>Insurance Services → Add New</strong></li>
+<li>Add title, content, featured image, and excerpt</li>
+<li>Fill in Service Details: Icon class, Starting price, Key features</li>
+<li>Assign to a Service Category</li>
+</ol>
+<p><strong>Shortcode:</strong> <code>[tevo_services count="6" columns="3" category=""]</code></p>
+
+<h2 id="translations">Translations</h2>
+<p>Tevo is fully translation-ready. Use the included <code>.pot</code> file in <code>/languages/</code> folder with tools like Poedit or Loco Translate plugin.</p>
+
+<h2 id="child-theme">Child Theme</h2>
+<p>A child theme (<code>tevo-child</code>) is included. Install and activate it for custom modifications. Your customizations will be preserved during theme updates.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>How do I update the theme?</h3>
+<p>Use the Envato Market plugin for automatic updates, or manually upload the new version via FTP.</p>
+<h3>Can I use Elementor Pro?</h3>
+<p>Yes! Tevo is fully compatible with Elementor Pro and supports Theme Builder locations.</p>
+
+<h2 id="changelog">Changelog</h2>
+<pre><code>v1.0.0 - Initial Release
+- 8 Custom Elementor widgets
+- WooCommerce integration
+- 3 Header styles
+- Full Customizer options
+- One-Click Demo Import
+- Responsive design
+- RTL support</code></pre>
+
+<h2 id="credits">Credits</h2>
+<ul>
+<li><strong>Fonts:</strong> Google Fonts (Inter, Outfit) — SIL Open Font License</li>
+<li><strong>Icons:</strong> Feather Icons — MIT License</li>
+<li><strong>TGM Plugin Activation:</strong> GPL-2.0+</li>
+<li><strong>WordPress:</strong> GPL-2.0+</li>
+</ul>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* Tevo WooCommerce Styles */
+
+.woocommerce ul.products li.product {
+  background: #fff; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: all 0.3s ease; padding: 0;
+}
+.woocommerce ul.products li.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.woocommerce ul.products li.product a img {
+  margin: 0; border-radius: 0;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  padding: 12px 16px 0;
+  font-family: var(--tevo-heading-font, 'Outfit', sans-serif);
+  font-size: 1rem;
+}
+.woocommerce ul.products li.product .price {
+  padding: 0 16px;
+  color: var(--tevo-primary, #1a3a5c);
+  font-weight: 700;
+}
+.woocommerce ul.products li.product .button {
+  margin: 12px 16px 16px;
+  background: var(--tevo-primary, #1a3a5c);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.woocommerce ul.products li.product .button:hover {
+  background: var(--tevo-secondary, #f0a030);
+}
+.woocommerce .woocommerce-ordering select,
+.woocommerce .woocommerce-result-count {
+  font-family: var(--tevo-body-font, 'Inter', sans-serif);
+}
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  background: var(--tevo-primary, #1a3a5c);
+  color: #fff;
+  border-color: var(--tevo-primary, #1a3a5c);
+}
+
+/* Single Product */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+  color: var(--tevo-primary, #1a3a5c);
+  border-bottom-color: var(--tevo-secondary, #f0a030);
+}
+.woocommerce div.product form.cart .button {
+  background: var(--tevo-primary, #1a3a5c);
+  border-radius: 8px; font-weight: 600;
+}
+.woocommerce div.product form.cart .button:hover {
+  background: var(--tevo-secondary, #f0a030);
+}
+.woocommerce .onsale {
+  background: var(--tevo-secondary, #f0a030);
+  border-radius: 8px;
+}
